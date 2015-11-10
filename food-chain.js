@@ -2,12 +2,11 @@ var lyrics = require('./song');
 
 function Song(song) {
     this.song = song;
-    this.songArray = '';
 };
 Song.prototype.verse = function (num) {
     var position = num - 1;
-    this.songArray = this.song.split('\n\n');
-    var verses = this.songArray.slice(position, num)
+    var songArray = this.song.split('\n\n');
+    var verses = songArray.slice(position, num)
     return verses.join('\n') + '\n';
 }
 
